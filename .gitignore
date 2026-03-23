@@ -1,0 +1,36 @@
+# Python-generated files
+**/__pycache__/
+*.py[cod]
+*$py.class
+build/
+dist/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv
+venv/
+ENV/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Database files 
+*.db
+*.sqlite3
+
+# Alembic
+alembic.log
+
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project specific
+.python-version

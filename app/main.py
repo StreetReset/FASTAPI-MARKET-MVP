@@ -5,7 +5,7 @@ from app.routers import categories, products, users
 
 app = FastAPI(
     title="Fastapi Магазин",
-    version="0.1.0"
+    version="1.0.0"
 )
 
 app.include_router(categories.router)

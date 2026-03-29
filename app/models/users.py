@@ -6,7 +6,7 @@ from app.database import Base
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from .products import Product
-
+    from .cart_items import CartItem
 class User(Base):
     __tablename__ = "users"
     
@@ -17,3 +17,4 @@ class User(Base):
     role: Mapped[str] = mapped_column(String, default="buyer")  # "buyer" or "seller"
     
     products : Mapped[list["Product"]] = relationship("Product", back_populates="seller")
+    cart_items: Mapped[list["CartItem"]] = relationship("CartItem", back_populates="user", cascade="all, delete-orphan")
